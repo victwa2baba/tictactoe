@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Japonesa';
+    src: url('../fonts/Japonesa.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --font-size: 16px;
+    --font-family: 'Oswald', sans-serif, arial;
+    --font-heading: 'Japonesa', sans-serif, arial;
+}
+
+
+body {
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    font-family: var(--font-heading);
+}
