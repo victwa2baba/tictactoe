@@ -29,3 +29,11 @@ body {
 header {
     font-family: var(--font-heading);
 }
+
+.d-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(50px, 100px));
+    gap: 5px;
+    grid-template-rows: repeat(3, minmax(50px, 100px));
+    justify-content: center;;
+}
