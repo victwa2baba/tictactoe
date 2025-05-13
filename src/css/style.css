@@ -16,8 +16,14 @@
     --font-size: 16px;
     --font-family: 'Oswald', sans-serif, arial;
     --font-heading: 'Japonesa', sans-serif, arial;
+    --cell-size: 100px;
+    --cell-gap: 5px;
+    --cell-font-size: 24px;
+    --cell-font-weight: bold;
+    --cell-border-color: #000;
+    --cell-hover-bg: #f0f0f0;
+    --board-bg: #fff;
 }
-
 
 body {
     font-size: var(--font-size);
@@ -32,8 +38,32 @@ header {
 
 .d-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(50px, 100px));
-    gap: 5px;
-    grid-template-rows: repeat(3, minmax(50px, 100px));
-    justify-content: center;;
+    grid-template-columns: repeat(3, var(--cell-size));
+    grid-template-rows: repeat(3, var(--cell-size));
+    gap: var(--cell-gap);
+    justify-content: center;
+    background-color: var(--board-bg);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid var(--cell-border-color);
+    font-size: var(--cell-font-size);
+    font-weight: var(--cell-font-weight);
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover,
+.cell:focus {
+    background-color: var(--cell-hover-bg);
+    outline: none;
 }
